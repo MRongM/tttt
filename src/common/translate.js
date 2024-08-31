@@ -5,7 +5,8 @@ export async function translateViaGoogleApi(q, sl, tl) {
     params.append('tl', tl)
     params.append('client', 'gtx')
     params.append('dt', 't')
-    const response = await fetch(`https://translate.googleapis.com/translate_a/single?${params}`)
+    const url = TRANSLATE_API + '?' + params
+    const response = await fetch(url)
     const result = await response.json()
     const translations = result[0]
     let translated = ''

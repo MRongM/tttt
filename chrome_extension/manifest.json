@@ -1,5 +1,5 @@
 {
-  "name": "tttt Translate",
+  "name": "4T",
   "version": "0.1",
   "manifest_version": 3,
   "description": "Translate everything!",
@@ -7,8 +7,23 @@
     "service_worker": "background.js"
   },
   "permissions": ["sidePanel"],
+  "host_permissions": ["https://w2.1778064.xyz"],
   "side_panel": {
     "default_path": "sidepanel/index.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+B",
+        "mac": "Command+B"
+      }
+    }
+  },
+  "icons": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
   },
   "action": {
     "default_icon": {

@@ -1,6 +1,7 @@
 import { resolve } from 'node:path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
+import webpack from 'webpack'
 
 export default {
     mode: 'development',
@@ -31,6 +32,9 @@ export default {
         new HtmlWebpackPlugin({
             template: resolve(import.meta.dirname, 'src/index.html')
         }),
+        new webpack.DefinePlugin({
+          TRANSLATE_API: JSON.stringify("https://translate.googleapis.com/translate_a/single"),
+        })
     ],
     resolve: {
         alias: {
