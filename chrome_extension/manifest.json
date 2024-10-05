@@ -1,13 +1,13 @@
 {
   "name": "4T",
-  "version": "0.1",
+  "version": "0.2",
   "manifest_version": 3,
-  "description": "Translate everything!",
+  "description": "https://alchem-x.github.io/tttt/",
   "background": {
     "service_worker": "background.js"
   },
   "permissions": ["sidePanel"],
-  "host_permissions": ["https://w2.1778064.xyz"],
+  "host_permissions": ["https://w2.1778064.xyz/*"],
   "side_panel": {
     "default_path": "sidepanel/index.html"
   },

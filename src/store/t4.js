@@ -1,11 +1,9 @@
 import { defineStore } from 'pinia'
-import { getStateFromLocalStorage, saveStateToLocalStorage } from '@/common/storage.js'
 import { translateViaGoogleApi } from '@/common/translate.js'
 
 export const useT4Store = defineStore('t4', {
     state() {
         return {
-            name: 'Tricky Translate Together Tool',
             sourceValue: '',
             targetValue: {},
             languageList: [],
@@ -14,7 +12,7 @@ export const useT4Store = defineStore('t4', {
     },
     getters: {
         appName() {
-            return 'Tricky Translate Together Tool'
+            return 'tttt'
         },
         languageOptions() {
             return [
@@ -35,10 +33,6 @@ export const useT4Store = defineStore('t4', {
         },
     },
     actions: {
-        init() {
-            Object.assign(this, getStateFromLocalStorage())
-            this.$subscribe((mutation, state) => saveStateToLocalStorage(state))
-        },
         async fetchTranslation() {
             const { languageList, sourceValue, targetValue } = this
             if (!sourceValue) {

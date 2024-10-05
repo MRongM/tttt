@@ -7,14 +7,8 @@ import CopyButton from '@/components/CopyButton.jsx'
 
 const ClassName = css`
     border: 1px solid #ccc;
-    padding: 1rem;
+    padding: .75rem;
     border-radius: 3px;
-
-    .title-line {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
 `
 
 export default defineComponent({
@@ -30,7 +24,7 @@ export default defineComponent({
             <div class={ClassName}>
                 <div class="title-line">
                     <NH4>{title}</NH4>
-                    <CopyButton />
+                    <CopyButton value={t4Store.sourceValue}/>
                 </div>
                 <NInput type="textarea"
                     vModel:value={t4Store.sourceValue}

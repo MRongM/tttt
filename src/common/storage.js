@@ -16,3 +16,8 @@ export function getStateFromLocalStorage() {
         return {}
     }
 }
+
+export function usePiniaLocalStorage(store) {
+    Object.assign(store, getStateFromLocalStorage())
+    store.$subscribe((mutation, state) => saveStateToLocalStorage(state))
+}

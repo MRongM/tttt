@@ -4,7 +4,7 @@ import { resolve } from 'node:path'
 import webpack from 'webpack'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-const config = merge(webpackBase, {
+const config = merge(webpackBase(), {
     output:{
         path: resolve(import.meta.dirname, 'chrome_extension/sidepanel'),
     },
