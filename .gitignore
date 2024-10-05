@@ -3,3 +3,4 @@ dist/
 .idea/
 chrome_extension/sidepanel/*
 package-lock.json
+*.zip
